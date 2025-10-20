@@ -1,0 +1,114 @@
+{
+  "name": "simple-smells-detector",
+  "version": "1.0.0",
+  "description": "Plugin extensible para Figma que detecta automáticamente usability smells en prototipos de interfaces de usuario",
+  "main": "code.js",
+  "scripts": {
+    "dev": "echo 'Desarrollo local: Carga el plugin en Figma usando manifest.json'",
+    "lint": "eslint *.js analysis-engine/**/*.js",
+    "lint:fix": "eslint *.js analysis-engine/**/*.js --fix",
+    "format": "prettier --write '**/*.{js,json,md}'",
+    "format:check": "prettier --check '**/*.{js,json,md}'",
+    "validate": "npm run lint && npm run format:check",
+    "docs:serve": "echo 'Servir documentación localmente (implementar si es necesario)'",
+    "build": "echo 'Build process para optimización antes de release'",
+    "test": "echo 'Framework de testing a implementar'",
+    "test:watch": "echo 'Tests en modo watch'",
+    "test:coverage": "echo 'Reporte de cobertura de tests'",
+    "release": "echo 'Script de release automatizado'",
+    "zip": "npm run validate && node scripts/create-plugin-zip.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/[usuario]/simple-smells-detector.git"
+  },
+  "keywords": [
+    "figma",
+    "plugin",
+    "usability",
+    "ux",
+    "design",
+    "smells",
+    "interface",
+    "prototype",
+    "analysis",
+    "automation",
+    "heuristics",
+    "user-experience"
+  ],
+  "author": {
+    "name": "Tu Nombre",
+    "email": "tu-email@ejemplo.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/[usuario]/simple-smells-detector/issues"
+  },
+  "homepage": "https://github.com/[usuario]/simple-smells-detector#readme",
+  "figma": {
+    "id": "simple-smells-detector",
+    "api": "1.0.0",
+    "name": "Simple Smells Detector",
+    "editorType": ["figma"]
+  },
+  "devDependencies": {
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-figma-plugins": "^0.3.0",
+    "prettier": "^3.1.0",
+    "archiver": "^6.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": {
+    "development": [
+      "last 1 chrome version"
+    ],
+    "production": [
+      "last 2 chrome versions"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2022": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "prettier"
+    ],
+    "plugins": [
+      "figma-plugins"
+    ],
+    "globals": {
+      "figma": "readonly",
+      "parent": "readonly"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2022,
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-console": "warn",
+      "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+      "prefer-const": "error",
+      "no-var": "error",
+      "figma-plugins/dynamic-page-find-method": "error",
+      "figma-plugins/dynamic-page-selection-read": "error"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "printWidth": 80,
+    "arrowParens": "avoid"
+  },
+  "volta": {
+    "node": "18.18.2",
+    "npm": "9.8.1"
+  }
+}
