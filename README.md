@@ -255,12 +255,6 @@ Este plugin forma parte de una tesina de grado que aborda la **detección tempra
 
 ---
 
-## 📞 Soporte
 
-- **Issues**: [GitHub Issues](https://github.com/[usuario]/simple-smells-detector/issues)
-- **Discusiones**: [GitHub Discussions](https://github.com/[usuario]/simple-smells-detector/discussions)
-- **Email**: [tu-email@ejemplo.com]
-
----
 
 ⭐ **Si este plugin te resulta útil, considera darle una estrella en GitHub para apoyar el proyecto.**
